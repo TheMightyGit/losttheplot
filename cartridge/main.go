@@ -49,8 +49,9 @@ const (
 )
 
 var (
-	mode           int
-	fullScreenRect = image.Rectangle{Max: image.Point{X: 320, Y: 200}}
+	mode            int
+	fullScreenRect  = image.Rectangle{Max: image.Point{X: 320, Y: 200}}
+	titleScreenRect = image.Rectangle{Min: image.Point{32 + 8, 0}, Max: image.Point{X: 256, Y: 200}}
 )
 
 type Camera struct {
@@ -1016,7 +1017,7 @@ func setupTitles() {
 		}
 	}
 
-	marvlib.API.SpritesGet(SpriteGraveyard).ChangePos(fullScreenRect)
+	marvlib.API.SpritesGet(SpriteGraveyard).ChangePos(titleScreenRect)
 	marvlib.API.SpritesGet(SpriteGraveyard).Show(GfxBankTitles, areaTitles)
 
 	mode = MODE_TITLE_SCREEN
