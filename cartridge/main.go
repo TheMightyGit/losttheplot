@@ -51,7 +51,7 @@ const (
 var (
 	mode            int
 	fullScreenRect  = image.Rectangle{Max: image.Point{X: 320, Y: 200}}
-	titleScreenRect = image.Rectangle{Min: image.Point{32 + 8, -40}, Max: image.Point{X: 256, Y: 256}}
+	titleScreenRect = image.Rectangle{Min: image.Point{32 + 8, -38}, Max: image.Point{X: 256, Y: 256}}
 )
 
 type Camera struct {
